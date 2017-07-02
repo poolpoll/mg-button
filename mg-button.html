@@ -1,0 +1,37 @@
+<dom-module id="mg-button">
+	<template>
+		<style>
+			#container {
+				padding: 5%;
+			}
+			button {
+				width: 30vh;
+				padding: 5%;
+				display: block;
+				margin: auto;
+				border-radius: 5px;
+				border: 1px;
+				background: linear-gradient( to bottom, #ffffff, #eeeeee );
+			}
+		</style>
+		<div id="container">
+			<button>[[buttonText]]</button>
+		</div>
+	</template>
+	<script>
+		Polymer({
+			is: 'mg-button',
+
+			properties: {
+				/**
+				 * button text to display
+				 * @type String
+				 */
+				buttonText: {
+					type: String,
+					value: 'button'
+				}
+			}
+		})
+	</script>
+</dom-module>
