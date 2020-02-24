@@ -1,22 +1,24 @@
 <dom-module id="mg-button">
 	<template>
 		<style>
-			#container {
-				padding: 5%;
+			:host {
+				margin: auto;
 			}
 			button {
-				width: 30vh;
-				padding: 5%;
-				display: block;
+				width: var(--mg-button-width);
+				height: var(--mg-button-height);
+				background: var(--mg-button-color);
 				margin: auto;
-				border-radius: 5px;
+				margin-top: var(--mg-button-margin, 0px);
+				margin-bottom: var(--mg-button-margin, 0px);
+				display: block;
+				border-radius: var(--mg-button-border-radius, 5px);
 				border: 1px;
-				background: linear-gradient( to bottom, #ffffff, #eeeeee );
+				color: #FFFFFF;
+				font-size: var(--mg-button-font-size);
 			}
 		</style>
-		<div id="container">
-			<button>[[buttonText]]</button>
-		</div>
+		<button>[[buttonText]]</button>
 	</template>
 	<script>
 		Polymer({
